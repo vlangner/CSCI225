@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Contact Me</title>
+    </head>
+
+    <body>
+        <form name="feedback">
+            <h1>Input User Information</h1>
+
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jh4C7w-dvho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <fieldset>
+                <p>* First Name: <input type="text" name="fname" placeholder="anonymous" required></p>
+                
+                <p>* Last Name: <input type="text" name="lname" placeholder="anonymous" required></p>
+                
+                <p>Email: <input type="email" name="mail" placeholder="name@domain.com"></p>
+
+                <p>Telephone Number: <input type="tel" name="telephone" placeholder="(###)###-####" pattern="(\d{3}\)\d{3}\-\d{4}\"></p>
+                
+                <p>Would you recommend this website? <input type="radio" name="yes" value="yes">Yes <input type="radio" name="no" value="no">No</p>
+
+                <p>How did you find this website? Select all that apply</p>
+                <p><input type="checkbox" name="blackboard" value="blackboard">Through Blackboard</p>
+                <p><input type="checkbox" name="github" value="github">Through GitHub</p>
+                <p><input type="checkbox" name="other" value="other">Other</p>
+                
+                <p>Select your favorite website(s):</p>
+                <p><select name="favwebsite" size="5" multiple>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="reddit">Reddit</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="youtube">Youtube</option>
+                </select></p>
+
+                <p></p>
+
+                <p>How would you rate this website?</p>
+                <p>1<input type="range" name="rating" min="1" max="10" step="1">10</p>
+
+                <p>Comments:</p>
+                <p><textarea name="comment" cols="30" rows="20"></textarea></p>
+
+                <p><input type="submit" name="submit" value="submit"> <input type="reset" name="reset"></p>
+
+            </fieldset>
+        </form>
+    </body>
+
+
+</html>
