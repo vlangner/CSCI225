@@ -1,0 +1,172 @@
+
+/* body section*/
+body{
+    width: 90%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url("../img/usca3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*title section*/
+div.title{
+    color: white;
+    
+    position: absolute;
+    top: 5%;
+    left: 30%;
+
+    font-size: 130%;
+}
+
+/*navbar section*/
+div.navbar{
+    background-color: white;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    z-index: 2;
+
+}
+
+div.navbar ul li{
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    padding: 0% 1% 0% 3%;
+    list-style: none;
+}
+
+div.navbar a{
+    color: black
+}
+
+/*introduction section*/
+div.introduction{
+    color: white;
+    
+    text-align: center;
+    width: 35%;
+    padding: 12% 5% 5% 10%;
+    font-size: 120%;
+}
+
+/* schedule section*/
+div.schedule h1{
+    color: white;
+
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    right: 25%;
+    font-size: 250%;
+}
+
+div.schedule table{
+    color: white;
+
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    right: 5%;
+    width: 50%;
+
+}
+
+/*contact information section*/
+div.contact{
+    color: white;
+
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    left: 18%;
+}
+
+div.contact p{
+    font-size: 200%;
+}
+
+div.contact a{
+    color: white;
+
+    font-size: 150%;
+}
+
+/* assignment section */
+div.assignment{
+    background-color: white;
+    color: black;
+
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 50%;
+    padding: 0% 0% 23% 0%;
+
+    border-width: medium;
+    border-color: black;
+    border-style: solid;
+}
+
+div.assignment h1{
+    text-align: center;
+
+    font-size: 250%;
+}
+
+div.assignment a{
+    color: black;
+}
+
+div.assignment ol li{
+    list-style-position: inside;
+    text-indent: 10%;
+    padding: 0% 0% 1% 0%;
+
+    font-size: 130%;
+}
+
+div.portfolio{
+    background-color: white;
+    color: black;
+
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: 50%;
+    padding: 0% 0% 22% 0%;
+
+    border-width: medium;
+    border-color: black;
+    border-style: solid;
+} 
+
+div.portfolio h1{
+    text-align: center;
+
+    font-size: 250%;
+}
+
+div.portfolio p{
+    text-indent: 10%;
+    padding: 0% 0% 1% 0%;
+
+    font-size: 130%;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+}
