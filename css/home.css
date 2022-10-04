@@ -30,7 +30,6 @@ div.navbar{
     right: 0px;
 
     z-index: 2;
-
 }
 
 div.navbar ul li{
@@ -46,13 +45,46 @@ div.navbar a{
 }
 
 /*introduction section*/
-div.introduction{
+div.introduction h1{
     color: white;
     
+    position: absolute;
     text-align: center;
-    width: 35%;
-    padding: 12% 5% 5% 10%;
-    font-size: 120%;
+    text-decoration: underline;
+    padding: 2% 2% 2% 2%;
+    top: 25%;
+    left: 41%;
+    
+    font-size: 200%;
+
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;
+}
+
+div.introduction p{
+    background-color: black;
+    color: white;
+    
+    position: absolute;
+    width: 25%;
+    top: 42%;
+    right: 37%;
+
+    font-size: 150%;
+
+    display: none;
+}
+
+div.introduction h1:hover{
+    -webkit-transition: ease-in-out 2s, background-color 2s;
+    background-color: blue;
+
+    -webkit-transform: translate(10px, 10px);
+}
+
+div.introduction h1:hover + p{
+    display: block;
 }
 
 /* schedule section*/
@@ -61,102 +93,219 @@ div.schedule h1{
 
     position: absolute;
     text-align: center;
-    top: 20%;
-    right: 25%;
-    font-size: 250%;
+    padding: 2% 2% 2% 2%;
+    top: 40%;
+    right: 12%;
+
+    font-size: 200%;
+
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;
 }
 
 div.schedule table{
+    background-color: black;
     color: white;
 
     position: absolute;
     text-align: center;
-    top: 30%;
-    right: 5%;
-    width: 50%;
+    top: 50%;
+    right: 37%;
+    width: 25%;
 
+    display: none;
+}
+
+div.schedule tr:nth-child(even){
+    background-color: red;
+}
+
+div.schedule h1:hover{
+    -webkit-transition: ease-in-out 2s, background-color 2s;
+    background-color: blue;
+
+    -webkit-transform: translate(10px, 10px);
+}
+
+div.schedule h1:hover + table{
+    display: block;
 }
 
 /*contact information section*/
-div.contact{
+div.contact h1{
     color: white;
 
     position: absolute;
     text-align: center;
-    top: 55%;
-    left: 18%;
+    padding: 2% 2% 2% 2%;
+    top: 40%;
+    left: 10%;
+    
+    font-size: 170%;
+
+    border-style: solid;
+    border-radius: 100px;
+    border-color: white;  
 }
 
-div.contact p{
+div.contact address{
+    background-color: black;
+
+    position: absolute;
+    top: 50%;
+    left: 43%;
+
     font-size: 200%;
+
+    display: none;
 }
 
 div.contact a{
     color: white;
+}
 
-    font-size: 150%;
+div.contact h1:hover + address{
+    display: block;
 }
 
 /* assignment section */
-div.assignment{
-    background-color: white;
-    color: black;
-
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    width: 50%;
-    padding: 0% 0% 23% 0%;
-
-    border-width: medium;
-    border-color: black;
-    border-style: solid;
-}
-
 div.assignment h1{
+    color: white;
+    
+    position: absolute;
     text-align: center;
+    padding: 2% 2% 2% 2%;
+    top: 70%;
+    right: 11%;
 
-    font-size: 250%;
-}
+    font-size: 200%;
 
-div.assignment a{
-    color: black;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;  
 }
 
 div.assignment ol li{
-    list-style-position: inside;
-    text-indent: 10%;
-    padding: 0% 0% 1% 0%;
+    background-color: black;
+    color: white;
 
-    font-size: 130%;
+    position: relative;
+    list-style-position: inside;
+    text-align: center;
+    list-style-type: upper-roman;
+    padding: 1% 1% 1% 1%;
+    width: 20%;
+    top: 500px;
+    left: 43%;
+
+    font-size: 200%;
+
+    display: none;
 }
 
-div.portfolio{
-    background-color: white;
-    color: black;
+div.assignment a{
+    color: white;
+}
+
+div.assignment h1:hover + ol li{
+    display: block;
+}
+
+/* portfolio section */
+div.portfolio h1{
+    color: white;
 
     position: absolute;
-    top: 100%;
-    right: 0%;
-    width: 50%;
-    padding: 0% 0% 22% 0%;
-
-    border-width: medium;
-    border-color: black;
-    border-style: solid;
-} 
-
-div.portfolio h1{
     text-align: center;
+    padding: 2% 2% 2% 2%;
+    top: 70%;
+    left: 14%;
 
-    font-size: 250%;
+    font-size: 200%;
+
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;      
 }
 
 div.portfolio p{
-    text-indent: 10%;
-    padding: 0% 0% 1% 0%;
+    background-color: gray;
+    color: white;
+    
+    position: absolute;
+    width: 30%;
+    top: 45%;
+    left: 35%;
 
-    font-size: 130%;
+    font-size: 150%;
+
+    box-shadow: 5px 10px black;
+
+    display: none;
+}
+
+div.portfolio h1:hover{
+    -webkit-transition: ease-in-out 2s, background-color 2s;
+    background-color: blue;
+
+    -webkit-transform: translate(10px, 10px);
+}
+
+div.portfolio h1:hover + p{
+    display: block;
+}
+
+/* CHECKLIST SECTION */
+
+/* picking a web font for paragraphs and picking font color/weight for all lists */
+p{
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+li{
+    color: white;
+    font-weight: 100;
+}
+
+/* transforming all h1 text to uppercase, setting letter spacing, and applying text shadow*/
+h1{
+    text-transform: uppercase;
+    letter-spacing: normal;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+/* setting line height and text align in p */
+p{
+    line-height: normal;
+    text-align: center;
+}
+
+/* setting text decoration to none and applying a special style for links */
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: lightblue;
+}
+
+/* image as the list-item marker */
+
+/* adding border to p sections of all other divs */
+div.introduction p, div.contact p, div.portfolio p, div.schedule table{
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+/* appropriate style to course schedule table */
+div.schedule table{
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    padding: 1% 1% 1% 1%;
+    vertical-align: middle;
+    empty-cells: show;
 }
 
 /* footer */
