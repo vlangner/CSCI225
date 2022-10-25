@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="css/bmi.css">
+    </head>
+
+    <body>
+        <div class="form">
+            <p><input type="text" name="name" id="name" placeholder="Enter Name" onblur="welcome()"></p>
+            <p id="message"></p>
+    
+            <p>Weight in Pounds: <input type="text" name="weight" id="weight" placeholder="Enter Weight"></p>
+    
+            <p>Height in Inches: <input type="text" name="height" id="height" placeholder="Enter Height"></p>
+    
+            <p> Choose your age group.
+                <select id="agegroup">
+                    <option> under 20 </option>
+                    <option> 21-30 </option>
+                    <option> 31-40 </option>
+                    <option> 41-50 </option>
+                    <option> 51+ </option>
+                </select>
+            </p>
+    
+            <p><input type="button" value="Calculate BMI"></p>
+    
+            <p id="reference"></p>
+    
+            <p id="result"></p>
+    
+            <script>
+                // welcome message
+                function welcome() {
+                    var name = document.getElementById('name').value;
+                    document.getElementById('message').innerHTML = "<b>Welcome " + name + ". Thanks for using this calculator!</b>";
+                }
+
+                // calculate bmi
+                function calculate() {
+                    var weight = parseFloat(document.getElementById('weight').value);
+                    var height = parseFloat(document.getElementById('height').value);
+                    var bmi = weight / height / height * 703;
+
+                    var age = document.getElementById('agegroup').selectedIndex;
+
+                    if (weight && height <= 0) {
+                        window.alert("Weight cannot be a negative number.")
+                    } else if (weight && height >= 0) {
+                        document.getElementById('result').innerHTML = "<b>Your BMI is " + bmi.toFixed(2) + ".</b>";
+                    } else {
+                        window.alert("Please enter a valid number.")
+                    }
+
+                    if (bmi >= 28) {
+                        window.alert("User is either overweight/obese.")
+                        window.open("http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm")
+                    }
+
+                    if (age == 0) {
+                        document.getElementById('reference').innerHTML = "Reference to BMI Percentile Scale: https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf"
+                    } else {
+                        document.getElementById('reference').innerHTML = "";
+                    }
+
+                    if(bmi < 18.5){
+                        document.getElementById('mii').animate([{transform: 'scaleX(0.8)'}],{duration: 1000, fill: "forwards"})
+                        document.getElementById('vertical').animate([{transform: 'translateX(' + (90) + 'px'}],{duration: 1000, fill: "forwards"})
+                    }else if(bmi >= 18.5 && bmi <= 24.9){
+                        document.getElementById('mii').animate([{transform: 'scaleX(1.0)'}],{duration: 1000, fill: "forwards"})
+                        document.getElementById('vertical').animate([{transform: 'translateX(' + (270) + 'px'}],{duration: 1000, fill: "forwards"})
+                    }else if(bmi >= 25.0 && bmi <= 29.9){
+                        document.getElementById('mii').animate([{transform: 'scaleX(1.2)'}],{duration: 1000, fill: "forwards"})
+                        document.getElementById('vertical').animate([{transform: 'translateX(' + (450) + 'px'}],{duration: 1000, fill: "forwards"})
+                    }else if(bmi >= 30.0){
+                        document.getElementById('mii').animate([{transform: 'scaleX(1.4)'}],{duration: 1000, fill: "forwards"})
+                        document.getElementById('vertical').animate([{transform: 'translateX(' + (630) + 'px'}],{duration: 1000, fill: "forwards"})
+                    }               
+                }
+
+                var bE = document.querySelector('input[value = "Calculate BMI"]');
+                bE.addEventListener('click', calculate, false);
+            </script>
+        </div>
+
+        <div class="mii">
+            <img src="img/mii.webp" id="mii">
+        </div>
+
+        <div class="bar">
+            <ul>
+                <li>Underweight</li>
+                <li>Normal Weight</li>
+                <li>Overweight</li>
+                <li>Obese</li>
+            </ul>
+        </div>
+
+        <div class="vertical">
+            <img src="img/Capture.PNG" id="vertical" width="40px" height="120px">
+        </div>
+    </body>
+</html>
