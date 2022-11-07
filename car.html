@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Local Auto Service Company</title>
+        <link rel="stylesheet" href="car.css">
+    </head>
+
+    <body>
+        <div id="form">
+            <h1 id="question">Starter Cranks?</h1>
+            <input type="radio" onclick="flow()" name="answer" id="yes">Yes
+            <input type="radio" onclick="flow()" name="answer" id="no">No
+
+            <script>
+                function flow(){
+                    var y = document.getElementById('yes');
+                    var n = document.getElementById('no');
+
+                    if(y.checked == true){
+                        document.getElementById('question').textContent = "Engine fires?";
+                        document.querySelector('input[name="answer"]:checked').checked = false;
+
+                        if(y.checked == true){
+                            document.getElementById('question').textContent = "Starts and stalls?";
+                        }
+                    }
+                }
+
+            </script>
+        </div>
+    </body>
+</html>

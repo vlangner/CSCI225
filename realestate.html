@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="realestate.css">
+        <title>Loan Calculator</title>
+    </head>
+
+    <body>
+        <div class = "navbar"> 
+            <ul>
+                <li>Buy</li>
+                <li>Sale</li>
+                <li>Loan</li>
+                <li>About</li>
+            </ul>
+        </div>
+
+        <div class="calculator">
+            <p>Loan Amount: <input type="text" name="amount" id="amount">$</p>
+            
+            <p>Interest Rate: <input type="text" name="interest" id="interest">%</p>
+            
+            <p>Loan Term: <input type="text" name="term" id="term"> Years</p>
+            
+            <p>Start Year: <input type="text" name="start" id="start">
+            
+            <p>Show Results By: <select id="results">
+                <option id="year">Year</option>
+                <option id="month">Month</option>
+            </select></p>
+            
+            <p><input type="button" value="Calculate" id="calculate"></p>
+            
+            <div id="output">
+                <script>
+                    function calculate(){
+                        var amount = parseFloat(document.getElementById('amount').value);
+                        var interest = parseFloat(document.getElementById('interest').value);
+                        var term = parseFloat(document.getElementById('term').value);
+                        var start = parseFloat(document.getElementById('start').value);
+
+                        var output = "<table>";
+                            
+                            for(var i = 1; i <= term; i++){
+                                output += "<tr>";
+                                
+                                for(var j = 1; j <= 4; j++){
+                                    output += "<td>";
+                                        
+                                        var monthlyInterest = interest / 12;
+
+                                        output += monthlyInterest;
+
+                                    output += "</td>";
+                                }
+                                output += "</tr>";
+                            }
+                            output += "</table>";
+
+                            // put it in output section
+                            document.getElementById('output').innerHTML = output;
+                    }
+
+                    var bE = document.getElementById('calculate').addEventListener('click', calculate, false);
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
