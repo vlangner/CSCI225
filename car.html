@@ -2,32 +2,277 @@
 
 <html>
     <head>
-        <title>Local Auto Service Company</title>
-        <link rel="stylesheet" href="car.css">
+        <title>Local Auto Service Company Interactive Quiz</title>
+        <link rel="stylesheet" href="css/car.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+    </script>
     </head>
-
+    
     <body>
-        <div id="form">
-            <h1 id="question">Starter Cranks?</h1>
-            <input type="radio" onclick="flow()" name="answer" id="yes">Yes
-            <input type="radio" onclick="flow()" name="answer" id="no">No
+        <main>
+            <form>
 
-            <script>
-                function flow(){
-                    var y = document.getElementById('yes');
-                    var n = document.getElementById('no');
+ 
+                <div class="first">
+                    <div id='q1'> Does starter crank?
+                        <p>
+                            <label><input type="radio" name='q1' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q1' value = "no"> No</label>
+                        </p>
+                    </div>
+                </div>
 
-                    if(y.checked == true){
-                        document.getElementById('question').textContent = "Engine fires?";
-                        document.querySelector('input[name="answer"]:checked').checked = false;
 
-                        if(y.checked == true){
-                            document.getElementById('question').textContent = "Starts and stalls?";
-                        }
-                    }
+                <!-- 1 = YES -->
+                <!-- 2 = NO -->
+
+                <!--IF ANSWER TO Q1 IS NO-->
+                <div class="solutions">
+                    <div id='q12'> Starter spins?
+                        <p>
+                            <label><input type="radio" name='q12' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q12' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q11'> Engine fires?
+                        <p>
+                            <label><input type="radio" name='q11' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q11' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q121'> 
+                        <p>
+                            Solenoid stuck, not powered, or missing teeth on flywheel.
+                        </p>
+                    </div>
+
+                    <div id='q122'> Battery read over 12V?
+                        <p>
+                            <label><input type="radio" name='q122' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q122' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q1222'>
+                        <p>
+                            Jump start or pop start car and check if battery is charging.
+                        </p>
+                    </div>
+
+                    <div id='q1221'> Cleaned terminals?
+                        <p>
+                            <label><input type="radio" name='q1221' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q1221' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q12211'>
+                        <p>
+                            With car in park or neutral, use heavy jumper or screwdriver to bypass starter relar solenoid and test starter.
+                        </p>
+                    </div>
+
+                    <div id='q12212'> 
+                        <p>
+                            Clean battery terminals, connectors, engine, and ground.
+                        </p>
+                    </div>
+
+                    <!--IF ANSWER TO Q1 IS YES-->
+
+                    <div id='q112'> Spark to plugs?
+                        <p>
+                            <label><input type="radio" name='q112' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q112' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q1121'> Fuel to filter?
+                        <p>
+                            <label><input type="radio" name='q1121' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q1121' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q11211'> Fuel injected?
+                        <p>
+                            <label><input type="radio" name='q11211' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q11211' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q11212'> 
+                        <p>
+                        Vapor lock, fuel pump, or blockage.
+                        </p>
+                    </div>
+
+                    <div id='q112111'>
+                        <p>
+                            Single point, check throttle body. Electronic multi-point, separate diagnostic.
+                        </p>
+                    </div>
+
+                    <div id='q112112'>
+                        <p>
+                            Try starter spray in carb, throttle open.
+                        </p>
+                    </div>
+                    
+                    <div id='q1122'> Spark from coil?
+                        <p>
+                            <label><input type="radio" name='q1122' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q1122' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q11221'> Mechanical distributor? 
+                        <p>
+                            <label><input type="radio" name='q11221' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q11221' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q112211'>
+                        <p>
+                            Check condenser, points, or magnetic pick-up, rotor, or cap damage.
+                        </p>
+                    </div>
+
+                    <div id='q112212'> 
+                        <p>
+                            For electronic distribution, see model manual for diagnostic checks.
+                        </p>
+                    </div>
+
+                    <div id='q11222'> 12V+ at coil primary?
+                        <p>
+                            <label><input type="radio" name='q11222' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q11222' value = "no"> No</label>
+                        </p>
+                    </div>
+                    
+                    <div id='q112221'>
+                        <p>
+                            Test coil for internal short. Check secondary output wire resistance.
+                        </p>
+                    </div>
+
+                    <div id='q112222'>
+                        <p>
+                            Ignition system wiring, voltage regulator
+                        </p>
+                    </div>
+
+                    <div id='q111'> Starts and stalls?
+                        <p>
+                            <label><input type="radio" name='q111' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q111' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q1112'>
+                        <p>
+                            Ignition timing, fuel problem, cranking too slow, battery, or starter.
+                        </p>
+                    </div>
+
+                    <div id='q1111'> Check OBD, blink code?
+                        <p>
+                            <label><input type="radio" name='q1111' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q1111' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q11112'>
+                        <p>
+                            Read OBD or OBD II or check for blink code access.
+                        </p>
+                    </div>
+
+                    <div id='q11111'> Stalls on key release to run?
+                        <p>
+                            <label><input type="radio" name='q11111' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q11111' value = "no"> No</label>
+                        </p>
+                    </div>
+                    
+                    <div id='q111111'>
+                        <p>
+                            Ignition "run" circuit or column key switch failure. Ring out with meter.
+                        </p>
+                    </div>
+
+                    <div id='q111112'> Stalls in rain?
+                        <p>
+                            <label><input type="radio" name='q111112' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q111112' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q1111121'>
+                        <p>
+                            Check for cracked coil, distributor. Check visible electrical arcing running in dark.
+                        </p>
+                    </div>
+
+                    <div id='q1111122'> Stalls warm?
+                        <p>
+                            <label><input type="radio" name='q1111122' value = "yes"> Yes</label>
+                            <label> <input type="radio" name='q1111122' value = "no"> No</label>
+                        </p>
+                    </div>
+
+                    <div id='q11111221'>
+                        <p>
+                            Adjust idle, blow out fuel filter, check fuel pump output. Check vacuum leak or sensor failure.
+                        </p>
+                    </div>
+
+                    <div id='q11111222'>
+                        <p>
+                            On cold stalling, check for stuck choke, EGR. Check for vacuum leak.
+                        </p>
+                    </div>
+                </div>
+
+            </form>
+        </main>
+        
+        <script>
+
+            $("#q1").hide().fadeIn(1000);
+
+            $('div.solutions').hide();
+
+            $('input[type="radio"]').change(function(){         
+
+                var question = $(this).attr('name');
+                var id="#"+question;
+                console.log(id);
+                var ans =  $(this).attr('value');          
+                $(id).fadeOut(1000);
+
+                if (ans =="yes"){
+                    id = id +"1";
+                }else{
+                    id = id +"2";
                 }
+                
+                console.log(id);
+                $(id).fadeIn(1000);
+            
+            });
+        </script>
 
-            </script>
-        </div>
+        <footer>
+            DISCLAIMER: This interactive quiz is basedon the Diagnostic Flowchart created by Morris Rosenthal. 
+            You can see flowchart by visiting <a href="https://www.ifitjams.com/starting.htm">https://www.ifitjams.com/starting.htm</a>.
+        </footer>
+
     </body>
 </html>
